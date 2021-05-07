@@ -1,6 +1,0 @@
-/*
-Μain config object that should be delivered through node-red
-{"globalsettings":{"broker":"mqtt://192.168.2.240:1883","logtopic":"global/logz"},"nextnode":"b3e5aac371d7e0","mynodeid":"b3e5aac371d7f9","previousnode":"b3e5aac371d7f8","appname":"mqttFilter","appsettings":{"rate_transmit":"1000","rate_sampling":"60"}}
-*/
-var config = 'eyJnbG9iYWxzZXR0aW5ncyI6eyJicm9rZXIiOiJtcXR0Oi8vMTkyLjE2OC4yLjI0MDoxODgzIiwibG9ndG9waWMiOiJnbG9iYWwvbG9neiJ9LCJuZXh0bm9kZSI6ImIzZTVhYWMzNzFkN2UwIiwibXlub2RlaWQiOiJiM2U1YWFjMzcxZDdmOSIsInByZXZpb3Vzbm9kZSI6ImIzZTVhYWMzNzFkN2Y4IiwiYXBwbmFtZSI6Im1xdHRGaWx0ZXIiLCJhcHBzZXR0aW5ncyI6eyJyYXRlX3RyYW5zbWl0IjoiMTAwMCIsInJhdGVfc2FtcGxpbmciOiI2MCJ9fQ==';
-module.exports = config;
