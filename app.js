@@ -164,7 +164,7 @@ function heapCheck () {
 }
 
 // Begin execution
-livemodules.push({"node":mynodeid,"name":process.title});
+livemodules.push({"node":mynodeid,"name":"filter"});
 
 // Start recieving control MQTT messages
 l.info('Started recieving control MQTT messages on '+controltopic);
