@@ -65,7 +65,6 @@ function filterRequests(payload){
 							mqttmod.send(broker,requestingNode+'/control',readyresponse);
 						}
 						l.info('Node '+requestingNode+' reported that is ready');
-						mqttmod.send(broker,requestingNode+'/control',readyresponse);
 						l.info('Informing the new nodes that local node is ready');
 						console.log(livemodules);
 					} 
