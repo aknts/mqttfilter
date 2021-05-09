@@ -22,8 +22,8 @@ const l = require('mqttlogger')(broker, logtopic, mqttmod, logmode);
 const filter = require('./filter');
 
 // Variables
-var readyresponse = '{"node":"'+mynodeid+'","name":"'+process.title+'","request":"ready"}';
-var terminatingresponse = '{"node":"'+mynodeid+'","name":"'+process.title+'","request":"terminating"}';
+var readyresponse = '{"node":"'+mynodeid+'","name":"filter","request":"ready"}';
+var terminatingresponse = '{"node":"'+mynodeid+'","name":"filter","request":"terminating"}';
 var init = 0;
 var halt = 1;
 var appmodules = ['emitter','filter','loadbalancer','trilaterator','aggregator'];
