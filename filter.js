@@ -22,6 +22,30 @@ var filter = {
 			obj.signalArray.push({did:measurements[i].did, RSSI:measurements[i].RSSI});
 		}
 		return orderedMeasurements;
+	},
+	removeDuplicates: function(measurements){
+		for (var i=0, n=measurements.length; i < n; ++i ) {
+    		let RPIKey = [];
+      		let RPIArray = [];
+      		for (var signalReading of measurements[i].signalArray){
+        		if (RPIKey[signalReading.did]){
+          			continue;
+        		}
+        		RPIKey[signalReading.did] = true;
+        		RPIArray.push(signalReading);
+      		}
+      		measurements[i].signalArray = RPIArray;
+    	}
+    return measurements;
+	},
+	removeInvalid: function(measurements) {
+		var uniqueMeasurements = [];
+		for (var i=0, n=measurements.length; i < n; ++i ) {
+			if (measurements[i].signalArray.length > 2) {
+				uniqueMeasurements.push(measurements[i]);
+		  	}
+		}
+	  return uniqueMeasurements;
 	}	
 };
 
