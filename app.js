@@ -143,6 +143,7 @@ function filterResults(payload) {
 		l.debug('Ended up with ' + orderedMeasurements.length + ' ordered measurements.');
 		let data = orderedMeasurements.splice(0,orderedMeasurements.length);
 		sendData(data);
+		data = null;
 	}
 }
 
