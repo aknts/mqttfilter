@@ -145,7 +145,7 @@ function filterResults(payload) {
 		if (data.length > 0) { 
 			sendData(data);
 		} else {
-			l.debug('Nothing to send, canceling.');
+			l.debug('Nothing to send, cancelling.');
 		}
 		data = null;
 	}
