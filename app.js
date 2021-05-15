@@ -142,7 +142,11 @@ function filterResults(payload) {
 		Array.prototype.push.apply(orderedMeasurements,filter.removeInvalid(filter.removeDuplicates(filter.order(results,l))));
 		l.debug('Ended up with ' + orderedMeasurements.length + ' ordered measurements.');
 		let data = orderedMeasurements.splice(0,orderedMeasurements.length);
-		sendData(data);
+		if (data.length > 0) { 
+			sendData(data);
+		} else {
+			l.debug('Nothing to send, canceling.');
+		}
 		data = null;
 	}
 }
