@@ -183,10 +183,8 @@ mqttmod.receive(broker,datatopic,filterResults);
 l.info('Started receiving control messages on '+pipelinetopic);
 mqttmod.receive(broker,pipelinetopic,filterRequests);
 
-mqttmod.send(broker,pipelinetopic,readyresponse);
-
 // Inform previous node that you are ready
-//mqttmod.send(broker,previousnodecontroltopic,readyresponse);
+mqttmod.send(broker,pipelinetopic,readyresponse);
 
 process.on('SIGTERM', function onSigterm () {
 	l.info('Got SIGTERM');
