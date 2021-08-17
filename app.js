@@ -138,7 +138,7 @@ function filterResults(payload) {
 	if (halt == 0) {
 		heapCheck();
 		var results = JSON.parse(payload);
-		l.info('Filtering '+results.length+' results.');
+		l.info('Filtering '+results.length+' results at: '+Date.now());
 		Array.prototype.push.apply(orderedMeasurements,filter.removeInvalid(filter.removeDuplicates(filter.order(results,l))));
 		l.debug('Ended up with ' + orderedMeasurements.length + ' ordered measurements.');
 		let data = orderedMeasurements.splice(0,orderedMeasurements.length);
@@ -152,7 +152,7 @@ function filterResults(payload) {
 }
 
 function sendData (results) {
-	l.info('Sending data, array of '+JSON.stringify(results.length)+' results to '+nextnodedatatopic+'.');
+	l.info('Sending data, array of '+JSON.stringify(results.length)+' results to '+nextnodedatatopic+'at: '+Date.now());
 	mqttmod.send(broker,nextnodedatatopic,JSON.stringify(results));
 }
 
