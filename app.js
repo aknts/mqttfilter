@@ -139,8 +139,8 @@ function filterResults(payload) {
 		heapCheck();
 		var results = JSON.parse(payload);
 		l.info('Filtering '+results.length+' results at: '+Date.now());
-		//Array.prototype.push.apply(orderedMeasurements,filter.removeInvalid(filter.removeDuplicates(filter.order(results,l))));
-		Array.prototype.push.apply(orderedMeasurements,filter.order(results,l));
+		Array.prototype.push.apply(orderedMeasurements,filter.removeInvalid(filter.removeDuplicates(filter.order(results,l))));
+		//Array.prototype.push.apply(orderedMeasurements,filter.order(results,l));
 		l.debug('Ended up with ' + orderedMeasurements.length + ' ordered measurements.');
 		let data = orderedMeasurements.splice(0,orderedMeasurements.length);
 		if (data.length > 0) { 
